@@ -24,7 +24,9 @@ function BookItemBase({ book, isBorrowed, onBorrow, onReturn }: BookItemProps) {
 
       <div className="book-card-bottom">
         <p className={`book-stock${outOfStock ? ' is-empty' : ''}`}>
-          Còn lại: <strong>{book.available}</strong>/{book.total}
+          <span>
+            Còn lại: <strong>{book.available}</strong>/{book.total}
+          </span>
           {outOfStock && <span className="stock-badge">Hết sách</span>}
         </p>
 
